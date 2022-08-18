@@ -5,4 +5,4 @@ app.get("/", function(res, req){
     res.setEncoding("WORKING!!!");
 });
 
-app.listen(process.env.PORT||5000)
+app.listen(process.env.PORT||3000)
