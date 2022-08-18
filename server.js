@@ -5,6 +5,8 @@ import initWebRoutes from "./routes/web";
 import bodyParser from "body-parser"
 import initCronJob from "./config/cronJob"
 
+let app = express()
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extends:true}));
 
