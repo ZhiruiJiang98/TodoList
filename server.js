@@ -1,3 +1,10 @@
+require("dotenv").config()
+import express from "express";
+import configViewEngine from "./config/viewEngine"
+import initWebRoutes from "./routes/web";
+import bodyParser from "body-parser"
+import initCronJob from "./config/cronJob"
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extends:true}));
 
