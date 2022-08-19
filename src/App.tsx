@@ -98,7 +98,7 @@ function Page() {
   }
   return (
     <div>
-      <TaskInputBar setArr={set}/>
+      {/* <TaskInputBar setArr={set}/> */}
       {taskTitleElement}
       {taskTitleButton}
       <ErrorBoundary FallbackComponent={ErrorFallback} onReset={() => {}}>

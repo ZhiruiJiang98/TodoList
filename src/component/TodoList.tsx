@@ -73,7 +73,7 @@ export function TodoList(props: Props) {
                 variant="contained"
                 color="inherit"
                 onClick={() => {
-                  console.log('button check')
+                  // console.log('button check')
                   turnOnEditedBoard()
                   setSelectTask(task)
                 }}

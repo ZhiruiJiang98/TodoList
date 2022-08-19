@@ -16,8 +16,7 @@ export default function TaskListEditedModal(prop: TaskDetailProps) {
   const [priority, setPriority] = React.useState<PriorityProps>(prop.currentTask.taskPriorityList)
   const [levelIndex, setLevel] = React.useState<number>()
   const [newTitle, setNewTitle] = React.useState(prop.currentTask.taskTitle)
-  const [newInfo, setNewInfo] = React.useState('')
-  const [task, setTask] = React.useState<todoProps>()
+  const [newInfo, setNewInfo] = React.useState(prop.currentTask.taskDescription)
 
   const handleSelectChange = (e: any) => {
     setPriority(e)
@@ -75,7 +74,7 @@ export default function TaskListEditedModal(prop: TaskDetailProps) {
           sx={{ m: 1, width: '13cm' }}
           id="task-title"
           label="Task Title"
-          defaultValue={task?.taskTitle}
+          defaultValue={prop.currentTask.taskTitle}
           value={newTitle}
           onChange={handleTitleChange}
         />
@@ -88,7 +87,7 @@ export default function TaskListEditedModal(prop: TaskDetailProps) {
           rows={4}
           id="task-info"
           label="Task Description"
-          defaultValue={task?.taskDescription}
+          defaultValue={prop.currentTask.taskDescription}
           onChange={getNewTaskDescription}
         />
       </div>
