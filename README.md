@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
 This TodoList is deploying in Heroku, plz check this link: https://check-node.herokuapp.com/
 
 ## Feature Support
