@@ -44,8 +44,7 @@ function Page() {
     localStorage.setItem('tasklistdata', JSON.stringify(taskList))
   }, [taskList])
 
-  // A/B Testing
-  const taskTitle = useFeature('task-title').on
+
 
   const todoIDCounterRef = React.useRef(0)
 

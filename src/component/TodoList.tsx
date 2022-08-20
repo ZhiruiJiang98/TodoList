@@ -13,6 +13,7 @@ import { useReducer } from 'react'
 // import userReducer from "./slices/userSlice";
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import { TaskButtonDIY } from '../Style/TaskListElementStyle'
 
 interface Props {
   taskList: todoProps[]
@@ -69,17 +70,23 @@ export function TodoList(props: Props) {
         {inputTaskList.map((task, index) => (
           <li style={{ display: 'flex', justifyContent: 'space-between' }} key={index}>
             <div>
-              <Button
-                variant="contained"
-                color="inherit"
+              <TaskButtonDIY
+                variant="outlined"
+                
                 onClick={() => {
                   // console.log('button check')
                   turnOnEditedBoard()
                   setSelectTask(task)
                 }}
+               
               >
+                <p style={{
+                  width: 200,
+                  textAlign:'left'
+                }}>
                 {task.taskTitle}
-              </Button>
+                </p>
+              </TaskButtonDIY>
               <Button
                 size="small"
                 onClick={() => {

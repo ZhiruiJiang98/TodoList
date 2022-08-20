@@ -23,11 +23,10 @@ export default function TaskInputBar(prop: Props) {
   return (
     <Box>
       <TextField
-        margin="normal"
-        sx={{ m: 1, width: '11cm',height:'1cm'}}
-        id="task-title"
+        variant='standard'
         label="Task Title"
         onChange={getInputVal}
+        size = 'small'
       />
       <Button onClick={pushSet}>
         <AddCircleIcon  sx = {{fontSize: 30}}/>
