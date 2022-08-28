@@ -4,6 +4,7 @@ import { Box, TextField } from '@mui/material'
 import * as React from 'react'
 import Select from 'react-select'
 import PriorityProps from '../state/PriorityProps'
+import FormControl from '@mui/material/FormControl'
 
 interface TaskDetailProps {
   taskList: todoProps[]
@@ -39,7 +40,14 @@ export default function TaskListEditedModal(prop: TaskDetailProps) {
   function NewPriorityList() {
     return (
       <div>
-        <Select value={priority} options={priorityListInfo} onChange={val => handleSelectChange(val)} />
+        <FormControl
+          sx={{
+            m: 1,
+            width: '13cm'
+          }}
+        >
+          <Select value={priority} options={priorityListInfo} onChange={val => handleSelectChange(val)} />
+        </FormControl>
       </div>
     )
   }
@@ -53,6 +61,10 @@ export default function TaskListEditedModal(prop: TaskDetailProps) {
   function ComfirmEditedButton() {
     return (
       <Button
+        sx={{
+          m: 1,
+          width: '5cm'
+        }}
         variant="outlined"
         onClick={() => {
           prop.OnOffTrigger()
@@ -94,9 +106,7 @@ export default function TaskListEditedModal(prop: TaskDetailProps) {
       <div>
         <NewPriorityList />
       </div>
-      <div>
-        <h1> </h1>
-      </div>
+
       <ComfirmEditedButton />
     </div>
   )

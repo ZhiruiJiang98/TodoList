@@ -5,6 +5,7 @@ import * as React from 'react'
 import Select from 'react-select'
 import { TextField } from '@mui/material'
 import AddCircleIcon from '@mui/icons-material/AddCircle'
+import FormControl from '@mui/material/FormControl'
 
 interface Props {
   setArr: (inputText: string, inputInfo: string, priorityLevel: any, priorityList: any) => void
@@ -36,8 +37,13 @@ export function Modal(props: Props) {
   }
 
   const PriorityList = () => (
-    <div>
+    <div>\
+      <FormControl sx={{
+        m: 1,
+        width: "13cm",
+      }}>
       <Select value={priority} options={priorityList} onChange={val => HandleSelectChange(val)} />
+      </FormControl>
     </div>
   )
 
@@ -62,7 +68,7 @@ export function Modal(props: Props) {
     <div className="modal">
       <Box margin="normal" sx={{ m: 1, width: '13cm', height: '1cm' }}>
         <h1>{taskTitle}</h1>
-        <div></div>
+        
       </Box>
       <div>
         <TextField
@@ -85,12 +91,12 @@ export function Modal(props: Props) {
           multiline={true}
         />
       </div>
-      <h1></h1>
+     
       <div>
         <PriorityList />
       </div>
       <h1></h1>
-      <Stack spacing={41} direction="row">
+      <Stack spacing={50} direction="row">
         <div>
           <Button
             variant="contained"
