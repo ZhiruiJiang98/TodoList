@@ -37,7 +37,7 @@ export function Modal(props: Props) {
   }
 
   const PriorityList = () => (
-    <div>\
+    <div>
       <FormControl sx={{
         m: 1,
         width: "13cm",
