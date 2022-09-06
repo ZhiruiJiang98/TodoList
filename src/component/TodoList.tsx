@@ -6,13 +6,12 @@ import React from 'react'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import AddTaskIcon from '@mui/icons-material/AddTask'
-import { Checkbox, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
 import PublishIcon from '@mui/icons-material/Publish'
-import { useReducer } from 'react'
+
 // import userReducer from "./slices/userSlice";
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+
 import { TaskButtonDIY } from '../Style/TaskListElementStyle'
 
 interface Props {
@@ -30,10 +29,6 @@ export function TodoList(props: Props) {
   const [FilterByPriorityIndex, SetFilterByPriorityIndex] = React.useState<String>('')
 
   //persist state on refresh
-  const persistConfig = {
-    key: 'main-root',
-    storage
-  }
 
   const [CompletedTaskList, SetCompletedTaskList] = React.useState<todoProps[]>([])
 

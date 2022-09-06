@@ -1,6 +1,5 @@
 import './App.css'
 import { GrowthBook, GrowthBookProvider } from '@growthbook/growthbook-react'
-import { useFeature } from '@growthbook/growthbook-react'
 import React from 'react'
 import { Modal } from './component/TaskInputModal'
 import todoProps from './state/TodoInterface'
@@ -10,7 +9,6 @@ import AddCircleIcon from '@mui/icons-material/AddCircle'
 import { ErrorBoundary } from 'react-error-boundary'
 import { AddTaskList } from './state/TodoListMethodLib'
 import { TodoList } from './component/TodoList'
-import TaskInputBar from './component/TaskInputBar'
 
 
 const growthbook = new GrowthBook({
@@ -117,6 +115,3 @@ function App() {
 }
 
 export default App
-function initializer<T, U>(testListReducer: () => void, arg1: never[], initializer: any, arg3: null): [any, any] {
-  throw new Error('Function not implemented.')
-}
